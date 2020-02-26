@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "capstone-sp-fx-client-side-solution",
+    "id": "ee6296c9-89e8-4665-b8e0-4f706f96927f",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/capstone-sp-fx.sppkg"
+  }
+}
