@@ -8,22 +8,16 @@ import {
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 
 import * as strings from 'DbInterfaceWebPartStrings';
-import DbInterface from './components/DbInterface';
-import { IDbInterfaceProps } from './components/IDbInterfaceProps';
+import { DbInterface } from './components/DbInterface';
 
 export interface IDbInterfaceWebPartProps {
   description: string;
 }
 
-export default class DbInterfaceWebPart extends BaseClientSideWebPart <IDbInterfaceWebPartProps> {
+export default class DbInterfaceWebPart extends BaseClientSideWebPart<IDbInterfaceWebPartProps> {
 
   public render(): void {
-    const element: React.ReactElement<IDbInterfaceProps> = React.createElement(
-      DbInterface,
-      {
-        description: this.properties.description
-      }
-    );
+    const element: React.ReactElement = React.createElement(DbInterface, { user: this.context.pageContext.user });
 
     ReactDom.render(element, this.domElement);
   }
